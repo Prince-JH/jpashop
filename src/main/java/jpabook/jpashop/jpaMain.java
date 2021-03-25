@@ -22,25 +22,6 @@ public class jpaMain {
         tx.begin();
 
         try{
-
-            Order order = new Order();
-            order.setOrderDate(LocalDateTime.now());
-            order.setStatus(OrderStatus.ORDER);
-
-            Member member = new Member();
-
-            em.persist(member);
-
-            order.setMember(member);
-
-            em.persist(order);
-
-            OrderItem orderItem = new OrderItem();
-
-            em.persist(orderItem);
-
-            order.addOrderItem(orderItem);
-
             tx.commit();
         }catch(Exception e){
             tx.rollback();
