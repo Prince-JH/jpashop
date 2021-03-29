@@ -22,10 +22,15 @@ public class jpaMain {
 
             Order order = new Order();
             Delivery delivery = new Delivery();
-            delivery.setOrder(order);
+            order.setDelivery(delivery);
 
             em.persist(order);
 
+            Delivery findDelivery = em.find(Delivery.class, delivery.getId());
+
+            System.out.println("===================");
+            System.out.println("findDelivery.id :" + findDelivery.getId());
+            System.out.println("===================");
 
             tx.commit();
         }catch(Exception e){

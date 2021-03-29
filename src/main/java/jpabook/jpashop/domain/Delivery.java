@@ -22,4 +22,8 @@ public class Delivery extends BaseEntity{
     public void setOrder(Order order) {
         this.order = order;
     }
+
+    public Long getId() {
+        return id;
+    }
 }

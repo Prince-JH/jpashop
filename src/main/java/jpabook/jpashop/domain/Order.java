@@ -66,4 +66,9 @@ public class Order extends BaseEntity{
     public void setStatus(OrderStatus status) {
         this.status = status;
     }
+
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
+    }
+
 }
