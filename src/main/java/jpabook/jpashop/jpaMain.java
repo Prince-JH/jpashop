@@ -20,11 +20,12 @@ public class jpaMain {
 
         try{
 
-            Book book = new Book();
-            book.setName("JPA");
-            book.setAuthor("김영한");
+            Order order = new Order();
+            Delivery delivery = new Delivery();
+            delivery.setOrder(order);
 
-            em.persist(book);
+            em.persist(order);
+
 
             tx.commit();
         }catch(Exception e){
